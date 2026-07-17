@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Files</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f4f8fc;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    width:90%;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+}
+
+h2{
+    text-align:center;
+    color:#007BFF;
+    margin-bottom:20px;
+}
+
+#searchInput{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#007BFF;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+button{
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    color:white;
+}
+
+.preview{
+    background:#17a2b8;
+}
+
+.download{
+    background:#28a745;
+}
+
+.delete{
+    background:#dc3545;
+}
+
+.back{
+    margin-top:20px;
+    width:100%;
+    background:#007BFF;
+    padding:12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>My Files</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Files...">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>File Name</th>
+
+<th>Type</th>
+
+<th>Size</th>
+
+<th>Date</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="fileTable">
+
+</tbody>
+
+</table>
+
+<button
+class="back"
+onclick="window.location.href='dashboard.html'">
+
+Back to Dashboard
+
+</button>
+
+</div>
+
+<script type="module" src="js/myfiles.js"></script>
+
+</body>
+</html>

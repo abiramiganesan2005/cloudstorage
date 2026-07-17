@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upload File</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+    background:#f4f8fc;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    width:600px;
+    margin:60px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+h2{
+    text-align:center;
+    color:#007bff;
+}
+
+input{
+    width:100%;
+    margin:20px 0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+progress{
+    width:100%;
+    margin-top:20px;
+}
+
+#status{
+    text-align:center;
+    margin-top:20px;
+    color:green;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Upload File</h2>
+
+<input type="file" id="fileInput">
+
+<button id="uploadBtn">
+Upload File
+</button>
+
+<progress id="progressBar" value="0" max="100"></progress>
+
+<p id="status"></p>
+
+<br>
+
+<button onclick="window.location.href='dashboard.html'">
+Back to Dashboard
+</button>
+
+</div>
+
+<script type="module" src="js/upload.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+background:#f4f8fc;
+font-family:Arial,sans-serif;
+}
+
+.container{
+width:450px;
+margin:50px auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+text-align:center;
+}
+
+img{
+width:120px;
+height:120px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+h2{
+color:#007BFF;
+}
+
+.info{
+margin:15px 0;
+font-size:18px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+.logout{
+background:#dc3545;
+}
+
+.logout:hover{
+background:#b02a37;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="images/profile.png" alt="Profile">
+
+<h2>User Profile</h2>
+
+<div class="info">
+<b>Name:</b>
+<span id="username">Loading...</span>
+</div>
+
+<div class="info">
+<b>Email:</b>
+<span id="email">Loading...</span>
+</div>
+
+<div class="info">
+<b>Total Files:</b>
+<span id="totalFiles">0</span>
+</div>
+
+<button id="dashboardBtn">
+Back to Dashboard
+</button>
+
+<button id="logoutBtn" class="logout">
+Logout
+</button>
+
+</div>
+
+<script type="module" src="js/profile.js"></script>
+
+</body>
+
+</html>

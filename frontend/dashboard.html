@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f8fc;
+display:flex;
+}
+
+.sidebar{
+width:240px;
+height:100vh;
+background:#007BFF;
+color:white;
+padding:20px;
+position:fixed;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.sidebar button{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+background:white;
+color:#007BFF;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.sidebar button:hover{
+background:#dcecff;
+}
+
+.main{
+margin-left:260px;
+width:100%;
+padding:30px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.search{
+width:300px;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.cards{
+display:flex;
+gap:20px;
+margin-bottom:30px;
+}
+
+.card{
+flex:1;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,.15);
+text-align:center;
+}
+
+.card h3{
+color:#007BFF;
+margin-bottom:10px;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+th{
+background:#007BFF;
+color:white;
+padding:12px;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:center;
+}
+
+.uploadBtn{
+margin-top:20px;
+padding:12px 25px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+.uploadBtn:hover{
+background:#218838;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>☁ Cloud Storage</h2>
+
+<button id="dashboardBtn">Dashboard</button>
+
+<button id="uploadBtn">Upload File</button>
+
+<button id="myFilesBtn">My Files</button>
+
+<button id="profileBtn">Profile</button>
+
+<button id="logoutBtn">Logout</button>
+
+</div>
+
+<div class="main">
+
+<div class="navbar">
+
+<h2 id="welcomeText">
+Welcome
+</h2>
+
+<input
+class="search"
+type="text"
+placeholder="Search Files">
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Total Files</h3>
+
+<h1 id="totalFiles">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Storage Used</h3>
+
+<h1 id="storageUsed">0 MB</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Recent Uploads</h3>
+
+<h1 id="recentUploads">0</h1>
+
+</div>
+
+</div>
+
+<h2>Recent Files</h2>
+
+<br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>File Name</th>
+
+<th>Type</th>
+
+<th>Size</th>
+
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recentFilesTable">
+    <tr>
+        <td colspan="4">No Files Uploaded Yet</td>
+    </tr>
+</tbody>
+
+</table>
+
+<button
+class="uploadBtn"
+id="uploadBottomBtn">
+
+Upload New File
+
+</button>
+
+</div>
+
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+
+</html>
